@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Inheritance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person person = new Person()
+            {
+                Nama = "Jono",
+                Umur = 20,
+            };
+            person.DisplayNameAndAge();
+
+            Teacher teacher = new Teacher()
+            {
+                Nama = "Thomas",
+                Umur = 35,
+                TeacherID = "190302",
+                Subject = "Math"
+            };
+            teacher.DisplayNameAndAge();
+            Student student = new Student()
+            {
+                Nama = "Sara",
+                Umur = 19,
+                StudentId = "10506",
+                Email = "sara1234@amikom.ac.id",
+            };
+            student.DisplayNameAndAge();
+
+            Animal animal = new Animal();
+            animal.Speak();
+
+            Anjing anjing = new Anjing();
+            animal = anjing;
+            animal.Speak();
+
+            Cat cat = new Cat();
+            animal = cat;
+            animal.Speak();
+
+            Chicken chiken = new Chicken();
+            animal = chiken;
+            animal.Speak();
+
+            Console.ReadKey();
+        }
+    }
+}
